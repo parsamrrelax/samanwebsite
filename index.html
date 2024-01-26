@@ -7,6 +7,8 @@
     <meta name="description" content="Mirela Academy | An art academy" />
 	<meta name="keywords" content="موسیقی, آموزشگاه, یوگا, آیریال یوگا, تئاتر, سینما, کلاس" />
 	<meta name="author" content="Mirela Academy" />
+    <link rel="manifest" href="/manifest.json">
+
     <title>Mirela Academy</title>
   <!--favicon-img--> 
    <link rel="icon" type="image/png" href="images/favicon.png">
@@ -591,4 +593,47 @@
 
 
 </body>
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(function(error) {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  </script>
+<script>
+    let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', function(event) {
+  // Prevent the default browser prompt
+  event.preventDefault();
+
+  // Store the event for later use
+  deferredPrompt = event;
+
+  // Display your custom install button
+  // Show a button or element and attach an event listener to trigger the prompt
+});
+
+// On your install button click, call the prompt method
+installButton.addEventListener('click', function() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(function(choiceResult) {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+
+      // Clear the deferredPrompt variable
+      deferredPrompt = null;
+    });
+  }
+});
+
+</script>  
 </html>
