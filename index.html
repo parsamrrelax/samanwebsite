@@ -597,46 +597,56 @@
 
 </body>
 <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/js/service-worker.js')
-        .then(function(registration) {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(function(error) {
-          console.error('Service Worker registration failed:', error);
+    let installPrompt = null;
+    const installButton = document.querySelector("#install");
+  
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.preventDefault();
+      installPrompt = event;
+      installButton.removeAttribute("hidden");
+  
+      // Customize the app icon and name for the install prompt
+      const customAppInfo = {
+        icon: 'images/mirela.ico', // replace with the path to your app icon
+        name: 'MiReLa' // replace with your app name
+      };
+  
+      event.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'dismissed') {
+          console.log('User cancelled installation');
+        } else {
+          console.log(`User accepted installation`);
+        }
+        disableInAppInstallPrompt();
+      });
+  
+      installButton.addEventListener("click", async () => {
+        if (!installPrompt) {
+          return;
+        }
+  
+        // Use the custom app info
+        installPrompt.userChoice.then(async (choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log(`Install prompt was accepted`);
+          } else {
+            console.log(`Install prompt was dismissed`);
+          }
+          disableInAppInstallPrompt();
         });
-    }
-  </script>
-<script>
-    let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', function(event) {
-  // Prevent the default browser prompt
-  event.preventDefault();
-
-  // Store the event for later use
-  deferredPrompt = event;
-
-  // Display your custom install button
-  // Show a button or element and attach an event listener to trigger the prompt
-});
-
-// On your install button click, call the prompt method
-installButton.addEventListener('click', function() {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then(function(choiceResult) {
-      if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the install prompt');
-      } else {
-        console.log('User dismissed the install prompt');
-      }
-
-      // Clear the deferredPrompt variable
-      deferredPrompt = null;
+  
+        await installPrompt.prompt();
+      });
     });
-  }
-});
-
-</script>  
+  
+    function disableInAppInstallPrompt() {
+      installPrompt = null;
+      installButton.setAttribute("hidden", "");
+    }
+  
+    window.addEventListener("appinstalled", () => {
+      disableInAppInstallPrompt();
+    });
+  </script>
+  
 </html>
