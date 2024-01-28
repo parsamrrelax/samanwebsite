@@ -389,7 +389,7 @@
       transform: scale(1.1);
   }
   #breaker{
-      height: 100vh;
+      height: 100%;
       width: 200%;
       background-color: #552777;
       opacity: 1;
@@ -420,6 +420,7 @@
       width: 100%;
       height: auto;
       overflow: hidden;
+      direction: rtl;
   }
   @keyframes scale{
       0%{
@@ -1400,7 +1401,7 @@
           display: none;
       }
       #breaker{
-          height: 50vh;
+          height: 100%;
           width: 200%;
           background-color: #552777;
           opacity: 1;
@@ -1455,6 +1456,7 @@
           width: 95%;
           padding: 10px;
           font-weight: 400;
+          text-align: center;
       }
       .about-first-paragraph .color{
           font-size: 30px;
@@ -1855,7 +1857,7 @@
           display: none;
       }
       #breaker{
-          height: 50vh;
+          height: 100%;
           width: 200%;
           background-color: #552777;
           opacity: 1;
@@ -1909,6 +1911,7 @@
           width: 95%;
           padding: 25px;
           font-weight: 400;
+          text-align: center;
       }
       .about-first-paragraph .color{
           font-size: 35px
