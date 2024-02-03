@@ -422,6 +422,32 @@
       overflow: hidden;
       direction: rtl;
   }
+  #violin{
+    background-color: #101010;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    overflow: hidden;
+    direction: rtl;
+    color: white;
+}
+.subtitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: max-content;
+}
+
+
+  #music{
+    background-color: #101010;
+    display: none;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    direction: rtl;
+  }
   @keyframes scale{
       0%{
           transform: scale(.6);
@@ -482,9 +508,15 @@
   }
   .about-second-line{
       opacity: .8;
-      font-size: 18px;
+      font-size: 18px; 
       font-weight: 400;
       direction: rtl;
+  }
+  .about-second-line-box{
+    background-color: #191919;
+    padding: 30px;
+    line-height: 2rem;
+    border-radius: 30px;
   }
   .about-main{
       display: flex;
@@ -544,6 +576,9 @@
   #services{
       position: relative;
   }
+  #music{
+    position: relative;
+}
   
   .services-heading{
       height: auto;
@@ -560,6 +595,21 @@
       font-weight: 900;
   
   }
+  .music-heading{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-family: vazirmatn;
+    color: whitesmoke;
+    padding:10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-weight: 900;
+
+}
   .about-first-paragraph {
       display: flex;
       align-items: center;
@@ -576,6 +626,13 @@
       text-align: center;
       padding:2.5%;
   }
+  .music-content{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding:2.5%;
+}
   .service{
       height:380px;
       width:45%;
@@ -591,9 +648,27 @@
       overflow: hidden;
       animation: opacity 1.4s ease ;
   }
+  .music{
+    height:380px;
+    width:17%;
+    margin: 1.5%;
+    background-color: #191919;
+    ;
+    display: inline-block;
+    box-shadow:0px 0px 25px rgb(0,0,0,.05);
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: opacity 1.4s ease ;
+}
   .service-img{
       text-align: center;
   }
+  .music-img{
+    text-align: center;
+}
   
   .service-img img{
       display: inline-block;
@@ -608,9 +683,25 @@
       height:100px;
       transition: all .8s ease;
   }
+  .music-img img{
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    margin: 20px;
+    border-radius: 30%;
+    padding: 10px;
+    border: 0px solid #552777;
+    background: #552777;
+    box-shadow:0px 0px 0px 0px #552777 ;
+    height:100px;
+    transition: all .8s ease;
+}
   .service:hover .service-img img{
       box-shadow:0px 0px 0px 400px #552777 ;
   }
+  .music:hover .service-img img{
+    box-shadow:0px 0px 0px 400px #552777 ;
+}
   .service-description{
       font-family: vazirmatn;
       color:whitesmoke;
@@ -618,18 +709,37 @@
       display: inline-block;
       z-index:2;
   }
+  .music-description{
+    font-family: vazirmatn;
+    color:whitesmoke;
+    position: relative;
+    display: inline-block;
+    z-index:2;
+}
   .service-description h2{
       padding: 10px;
       margin: 5px;
       font-weight: 200;
       font-size: 25px;
   }
+  .music-description h2{
+    padding: 10px;
+    margin: 5px;
+    font-weight: 200;
+    font-size: 25px;
+}
   .service-description p{
       padding: 10px;
       font-weight: 200;
       font-size: 16px;
       opacity: .8;
   }
+  .music-description p{
+    padding: 10px;
+    font-weight: 200;
+    font-size: 16px;
+    opacity: .8;
+}
   #skills{
       width: 100%;
       height:auto;
@@ -790,6 +900,7 @@
       font-weight: 400;
   }
   .portfolio{
+    direction: rtl;
       height:auto;
       width: 100%;
       display: flex;
@@ -829,6 +940,25 @@
       font-family: vazirmatn;
       font-weight: 200;
       padding: 20px;
+  }
+  
+  .services-content button{
+    background-color: #552777;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+  }
+  .music-content button{
+    background-color: #552777;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
   }
   .portfolio-text button{
       font-size: 16px;
@@ -1470,6 +1600,7 @@
       .about-second-line{
           opacity: .8;
           font-size: 15px;
+          
       }
       .about-main{
           display: flex;
@@ -1506,7 +1637,22 @@
           z-index: 2;
           border-radius: 10px;
           overflow: hidden;
+          padding-top: 30px;
       }
+      .music{
+        height:250px;
+        width:90%;
+        margin: 1.5%;
+        background-color: #191919;
+        display: inline-block;
+        box-shadow:0px 0px 25px rgb(0,0,0,.1);
+        position: relative;
+        text-align: center;
+        z-index: 2;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 10px;
+    }
       .service-img img{
           display: inline-block;
           z-index: 2;
@@ -1517,6 +1663,16 @@
           height:80px;
           transition: all .8s ease;
       }
+      .music-img img{
+        display: inline-block;
+        z-index: 2;
+        position: relative;
+        margin: 20px;
+        border-radius: 30%;
+        padding: 10px;
+        height:80px;
+        transition: all .8s ease;
+    }
       .skill{
           width:80%;
       }
@@ -1574,6 +1730,9 @@
               .service:hover .service-img img{
                   box-shadow:0px 0px 0px 0px #552777 ;
               }
+              .music:hover .music-img img{
+                box-shadow:0px 0px 0px 0px #552777 ;
+            }
               .portfolio-image img{
                   height: 300px;
                   width: 100%;
@@ -1977,18 +2136,44 @@
           padding: 10px;
           overflow: hidden;
       }
+      .music{
+        height:auto;
+        width:45%;
+        margin: 2%;
+        background-color: #191919;
+        display: inline-block;
+        box-shadow:0px 0px 25px rgb(0,0,0,.1);
+        position: relative;
+        text-align: center;
+        z-index: 2;
+        border-radius: 10px;
+        padding: 10px;
+        overflow: hidden;
+    }
       .service-description h2{
           padding: 10px;
           margin: 5px;
           font-weight: 200;
           font-size: 22px;
       }
+      .music-description h2{
+        padding: 10px;
+        margin: 5px;
+        font-weight: 200;
+        font-size: 22px;
+    }
       .service-description p{
           padding: 10px;
           font-weight: 200;
           font-size: 15px;
           opacity: .8;
       }
+      .music-description p{
+        padding: 10px;
+        font-weight: 200;
+        font-size: 15px;
+        opacity: .8;
+    }
       .skill{
           width:40%;
       }
@@ -2046,6 +2231,9 @@
               .service:hover .service-img img{
                   box-shadow:0px 0px 0px 0px #552777 ;
               }
+              .music:hover .music-img img{
+                box-shadow:0px 0px 0px 0px #552777 ;
+            }
               .portfolio-image img{
                   height: 380px;
                   width: 100%;
@@ -2311,7 +2499,7 @@
        }
       .about-second-line{
           opacity: .8;
-          font-size: 28px;
+          font-size: 18px;
           font-weight: 200;
       }
       .cv a button{
@@ -2331,23 +2519,40 @@
       }
       .service{
           height:400px;
-          width:39%;
+          width:19%;
           margin: 1.5%;
-          padding: 10px;
+          padding: 50px;
           background-color: #191919;
           display: inline-block;
           box-shadow:0px 0px 25px rgb(0,0,0,.05);
           position: relative;
           text-align: center;
           z-index: 2;
-          border-radius: 10px;
+          border-radius: 30px;
           overflow: hidden;
           animation: opacity 1.4s ease ;
       }
+      .music{
+        height:400px;
+        width:17%;
+        margin: 1.5%;
+        padding: 50px;
+        background-color: #191919;
+        display: inline-block;
+        box-shadow:0px 0px 25px rgb(0,0,0,.05);
+        position: relative;
+        text-align: center;
+        z-index: 2;
+        border-radius: 30px;
+        overflow: hidden;
+        animation: opacity 1.4s ease ;
+    }
       .service-img{
           text-align: center;
       }
-      
+      .music-img{
+        text-align: center;
+    }
       .service-img img{
           display: inline-block;
           z-index: 2;
@@ -2358,18 +2563,40 @@
           height:120px;
           transition: all .8s ease;
       }
+      .music-img img{
+        display: inline-block;
+        z-index: 2;
+        position: relative;
+        margin: 20px;
+        border-radius: 30%;
+        padding: 10px;
+        height:120px;
+        transition: all .8s ease;
+    }
       .service-description h2{
           padding: 10px;
           margin: 5px;
           font-weight: 200;
           font-size: 32px;
       }
+      .music-description h2{
+        padding: 10px;
+        margin: 5px;
+        font-weight: 200;
+        font-size: 32px;
+    }
       .service-description p{
           padding: 10px;
           font-weight: 200;
           font-size: 18px;
           opacity: .8;
       }
+      .music-description p{
+        padding: 10px;
+        font-weight: 200;
+        font-size: 18px;
+        opacity: .8;
+    }
       .blogs{
           height: 420px;
           width: 30%;
