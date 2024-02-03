@@ -515,6 +515,7 @@
   .about-second-line-box{
     background-color: #191919;
     padding: 30px;
+    margin: 10px;
     line-height: 2rem;
     border-radius: 30px;
   }
