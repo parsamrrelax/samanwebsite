@@ -6,12 +6,7 @@
   */
 
   @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
-  /* .videos{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: 15rem;
 
-  } */
   *{
       padding: 0%;
       margin: 0%;
@@ -2516,7 +2511,7 @@
   
   
   @media all and (max-width: 9000px) and (min-width: 1441px){
-  .videos{
+  .responsive-video{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding: 15rem;
