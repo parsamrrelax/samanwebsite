@@ -6,12 +6,12 @@
   */
 
   @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
-  .videos{
+  /* .videos{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     padding: 15rem;
 
-  }
+  } */
   *{
       padding: 0%;
       margin: 0%;
@@ -1494,12 +1494,29 @@
   
   
   @media only screen and (max-width: 550px){
-    .videos{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        padding: 15rem;
-    
-      }
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .responsive-video {
+        width: 100%;
+        max-width: 600px; /* You can adjust the max-width as needed */
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 56.25%; /* Aspect ratio for 16:9 videos */
+    }
+
+    .responsive-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
       .header-content{
           height: 100vh;
           width: 100%;
@@ -1525,7 +1542,7 @@
       .social-media-links{
           width: 100%;
           left: 0;
-          bottom: 0;
+          bottom: 5;
           position: absolute;
           padding: 10px;
           height: auto;
@@ -1988,12 +2005,28 @@
   
   
   @media all and (max-width: 1025px) and (min-width: 551px){
-    .videos{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        padding: 15rem;
-    
-      }
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .responsive-video {
+        width: 100%;
+        max-width: 600px; /* You can adjust the max-width as needed */
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 56.25%; /* Aspect ratio for 16:9 videos */
+    }
+
+    .responsive-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
       .header-content{
           height: 100vh;
           width: 100%;
@@ -2016,7 +2049,7 @@
       .social-media-links{
           width: 100%;
           left: 0;
-          bottom: 0;
+          bottom: 5;
           position: absolute;
           padding: 10px;
           height: auto;
