@@ -6,7 +6,12 @@
   */
 
   @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+  .videos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 15rem;
 
+  }
   *{
       padding: 0%;
       margin: 0%;
@@ -1489,6 +1494,12 @@
   
   
   @media only screen and (max-width: 550px){
+    .videos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 15rem;
+    
+      }
       .header-content{
           height: 100vh;
           width: 100%;
@@ -1977,6 +1988,12 @@
   
   
   @media all and (max-width: 1025px) and (min-width: 551px){
+    .videos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 15rem;
+    
+      }
       .header-content{
           height: 100vh;
           width: 100%;
@@ -2466,7 +2483,12 @@
   
   
   @media all and (max-width: 9000px) and (min-width: 1441px){
-  
+  .videos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 15rem;
+
+  }
       .portfolio-image img{
           height: 500px;
           width: 100%;
