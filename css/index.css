@@ -448,6 +448,14 @@
     overflow: hidden;
     direction: rtl;
   }
+  #yoga{
+    background-color: #101010;
+    display: none;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    direction: rtl;
+  }
   @keyframes scale{
       0%{
           transform: scale(.6);
@@ -580,6 +588,9 @@
   #music{
     position: relative;
 }
+#yoga{
+    position: relative;
+}
   
   .services-heading{
       height: auto;
@@ -596,7 +607,7 @@
       font-weight: 900;
   
   }
-  .music-heading{
+  .music-heading, .yoga-heading{
     height: auto;
     width: 100%;
     text-align: center;
@@ -627,7 +638,7 @@
       text-align: center;
       padding:2.5%;
   }
-  .music-content{
+  .music-content, .yoga-content{
     height: auto;
     width: 100%;
     overflow: hidden;
@@ -649,7 +660,7 @@
       overflow: hidden;
       animation: opacity 1.4s ease ;
   }
-  .music{
+  .music, .yoga{
     height:380px;
     width:17%;
     margin: 1.5%;
@@ -667,7 +678,7 @@
   .service-img{
       text-align: center;
   }
-  .music-img{
+  .music-img, .yoga-img{
     text-align: center;
 }
   
@@ -684,7 +695,7 @@
       height:100px;
       transition: all .8s ease;
   }
-  .music-img img{
+  .music-img img, .yoga-img img{
     display: inline-block;
     z-index: 2;
     position: relative;
@@ -700,7 +711,7 @@
   .service:hover .service-img img{
       box-shadow:0px 0px 0px 400px #552777 ;
   }
-  .music:hover .service-img img{
+  .music:hover .service-img img, .yoga:hover .service-img img{
     box-shadow:0px 0px 0px 400px #552777 ;
 }
   .service-description{
@@ -710,7 +721,7 @@
       display: inline-block;
       z-index:2;
   }
-  .music-description{
+  .music-description, .yoga-description{
     font-family: vazirmatn;
     color:whitesmoke;
     position: relative;
@@ -723,7 +734,7 @@
       font-weight: 200;
       font-size: 25px;
   }
-  .music-description h2{
+  .music-description h2, .yoga-description h2{
     padding: 10px;
     margin: 5px;
     font-weight: 200;
@@ -735,7 +746,7 @@
       font-size: 16px;
       opacity: .8;
   }
-  .music-description p{
+  .music-description p, .yoga-description p{
     padding: 10px;
     font-weight: 200;
     font-size: 16px;
@@ -952,7 +963,7 @@
     outline: none;
     border: none;
   }
-  .music-content button{
+  .music-content button, .yoga-content button{
     background-color: #552777;
     color: white;
     border-radius: 10px;
@@ -1489,6 +1500,28 @@
   
   
   @media only screen and (max-width: 550px){
+.other-text-paragraph{
+    padding: 40px;
+    background-color: #131415;
+    border-radius: 50px;
+    font-size: 15px;
+}
+    .other-text{
+        padding: 3rem;
+        font-family: vazirmatn;
+        text-align: right;
+        direction: rtl;
+    }
+.other-text-span{
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: #532676;
+    font-family: vazirmatn;
+    font-weight: 900;
+}
+
     .videos {
         display: flex;
         flex-wrap: wrap;
@@ -1663,7 +1696,7 @@
           overflow: hidden;
           padding-top: 30px;
       }
-      .music{
+      .music, .yoga{
         height:250px;
         width:90%;
         margin: 1.5%;
@@ -1687,7 +1720,7 @@
           height:80px;
           transition: all .8s ease;
       }
-      .music-img img{
+      .music-img img, .yoga-img img{
         display: inline-block;
         z-index: 2;
         position: relative;
@@ -1754,7 +1787,7 @@
               .service:hover .service-img img{
                   box-shadow:0px 0px 0px 0px #552777 ;
               }
-              .music:hover .music-img img{
+              .music:hover .music-img img, .yoga:hover .yoga-img img{
                 box-shadow:0px 0px 0px 0px #552777 ;
             }
               .portfolio-image img{
@@ -2000,6 +2033,29 @@
   
   
   @media all and (max-width: 1025px) and (min-width: 551px){
+    .other-text-paragraph{
+        padding: 40px;
+        background-color: #131415;
+        border-radius: 50px;
+        font-size: 15px;
+    }
+        .other-text{
+            padding: 3rem;
+            font-family: vazirmatn;
+            text-align: right;
+            direction: rtl;
+        }
+    .other-text-span{
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        color: #532676;
+        font-family: vazirmatn;
+        font-weight: 900;
+    }
+    
+    
     .videos {
         display: flex;
         flex-wrap: wrap;
@@ -2182,7 +2238,7 @@
           padding: 10px;
           overflow: hidden;
       }
-      .music{
+      .music, .yoga{
         height:auto;
         width:45%;
         margin: 2%;
@@ -2202,7 +2258,7 @@
           font-weight: 200;
           font-size: 22px;
       }
-      .music-description h2{
+      .music-description h2, .yoga-description h2{
         padding: 10px;
         margin: 5px;
         font-weight: 200;
@@ -2214,7 +2270,7 @@
           font-size: 15px;
           opacity: .8;
       }
-      .music-description p{
+      .music-description p, .yoga-description p{
         padding: 10px;
         font-weight: 200;
         font-size: 15px;
@@ -2277,7 +2333,7 @@
               .service:hover .service-img img{
                   box-shadow:0px 0px 0px 0px #552777 ;
               }
-              .music:hover .music-img img{
+              .music:hover .music-img img, .yoga:hover .yoga-img img{
                 box-shadow:0px 0px 0px 0px #552777 ;
             }
               .portfolio-image img{
@@ -2511,6 +2567,32 @@
   
   
   @media all and (max-width: 9000px) and (min-width: 1441px){
+    .other-text-paragraph{
+        padding-right: 10rem;
+        padding-left: 10rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        margin-right: 20rem;
+        margin-left: 20rem;
+        background-color: #131415;
+        border-radius: 50px;
+    }
+    .other-text{
+        padding: 3rem;
+        font-family: vazirmatn;
+        text-align: right;
+        direction: rtl;
+    }
+.other-text-span{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: #532676;
+    font-family: vazirmatn;
+    font-weight: bold;
+}
+
   .responsive-video{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -2583,7 +2665,7 @@
           overflow: hidden;
           animation: opacity 1.4s ease ;
       }
-      .music{
+      .music, .yoga{
         height:400px;
         width:17%;
         margin: 1.5%;
@@ -2601,7 +2683,7 @@
       .service-img{
           text-align: center;
       }
-      .music-img{
+      .music-img, .yoga-img{
         text-align: center;
     }
       .service-img img{
@@ -2614,7 +2696,7 @@
           height:120px;
           transition: all .8s ease;
       }
-      .music-img img{
+      .music-img img, .yoga-img img{
         display: inline-block;
         z-index: 2;
         position: relative;
@@ -2630,7 +2712,7 @@
           font-weight: 200;
           font-size: 32px;
       }
-      .music-description h2{
+      .music-description h2, .yoga-description h2{
         padding: 10px;
         margin: 5px;
         font-weight: 200;
@@ -2642,7 +2724,7 @@
           font-size: 18px;
           opacity: .8;
       }
-      .music-description p{
+      .music-description p, .yoga-description p{
         padding: 10px;
         font-weight: 200;
         font-size: 18px;
