@@ -24,7 +24,7 @@
       transition: all .4s ease;
     }
     ::-webkit-scrollbar-track {
-      background: #101010; 
+      background: #171717; 
       border-radius: 4px;
       width: 4px;
     }
@@ -39,7 +39,7 @@
     -moz-appearance: textfield;
   }
     html{
-      background: #101010;
+      background: #171717;
       
     }
     #loader{
@@ -415,7 +415,7 @@
       transition: all .4s ease;
   }
   #about{
-      background-color: #101010;
+      background-color: #171717;
       display: none;
       width: 100%;
       height: auto;
@@ -423,7 +423,7 @@
       direction: rtl;
   }
   #violin{
-    background-color: #101010;
+    /* background-color: #171717; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -441,7 +441,7 @@
 
 
   #music{
-    background-color: #101010;
+    background-color: #171717;
     display: none;
     width: 100%;
     height: auto;
@@ -449,7 +449,7 @@
     direction: rtl;
   }
   #yoga{
-    background-color: #101010;
+    background-color: #171717;
     display: none;
     width: 100%;
     height: auto;
@@ -933,7 +933,7 @@
       margin-top: 160px;
       z-index: 3;
       opacity: 1;
-      background: #080808;
+      background: #191919;
       padding-top: 10px;
       padding-bottom: 10px;
   }
@@ -954,7 +954,7 @@
       padding: 20px;
   }
   
-  .services-content button{
+  .services-content button, .header-content button{
     background-color: #552777;
     color: white;
     border-radius: 10px;
@@ -963,7 +963,7 @@
     outline: none;
     border: none;
   }
-  .music-content button, .yoga-content button{
+  .music-content button, .yoga-content button,.header-content button{
     background-color: #552777;
     color: white;
     border-radius: 10px;
@@ -972,7 +972,7 @@
     outline: none;
     border: none;
   }
-  .portfolio-text button{
+  .portfolio-text button, .header-content button{
       font-size: 16px;
       opacity: .8;
       font-family: vazirmatn;
@@ -989,7 +989,7 @@
       position: relative;
       transition: all .4s ease;
   }
-  .portfolio-text button::before{
+  .portfolio-text button::before , .header-content button::before{
       content: "";
       position: absolute;
       width: 0%;
@@ -1001,7 +1001,7 @@
       background: #552777;
       transition: all .7s ease;
   }
-  .portfolio-text button:hover{
+  .portfolio-text button:hover, .header-content button:hover{
       opacity: 1;
       color:whitesmoke;
   }
@@ -1009,7 +1009,7 @@
        position: relative;
       z-index: 4;
   }
-  .portfolio-text button:hover::before{
+  .portfolio-text button:hover::before, .header-content button:hover::before{
       opacity: 1;
       width: 120%;
   }
@@ -1049,7 +1049,7 @@
       display: none;
       height: auto;
       overflow-x: hidden;
-      background-color: #101010;
+      background-color: #171717;
       width: 100%;
       color:whitesmoke;
   }
@@ -1099,7 +1099,7 @@
   }
   
   #blog{
-      background: #101010;
+      background: #171717;
       display: none;
       color:whitesmoke;
       width: 100%;
@@ -1186,7 +1186,7 @@
       height: auto;
       text-align: center;
       width: 100%;
-      background: #101010;
+      background: #171717;
       position: relative; 
   }
   .contact-header{
@@ -1237,7 +1237,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: #101010;
+      background: #171717;
       opacity: .8;
       pointer-events: none;
   }
@@ -1363,7 +1363,7 @@
   }
   
   .footer{
-      background: #080808;
+      background: #191919;
       width: 100%;
       padding: 20px;
       color: whitesmoke;
@@ -1898,7 +1898,7 @@
                   position: absolute;
                   top: 0;
                   left: 0;
-                  background: #101010;
+                  background: #171717;
                   opacity: .7;
                   pointer-events: none;
               }
@@ -2309,7 +2309,7 @@
           margin-left: 0px;
           margin-top: 0px;
           z-index: 1;
-          background: #080808;
+          background: #191919;
           padding-top: 15px;
           padding-bottom: 15px;
       }
@@ -2446,7 +2446,7 @@
                   position: absolute;
                   top: 0;
                   left: 0;
-                  background: #101010;
+                  background: #171717;
                   opacity: .7;
                   pointer-events: none;
               }
@@ -2845,7 +2845,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          background: #101010;
+          background: #171717;
           opacity: .7;
           pointer-events: none;
       }
